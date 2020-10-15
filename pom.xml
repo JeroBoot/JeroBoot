@@ -14,7 +14,7 @@
     </parent>
 
     <groupId>com.jero.boot</groupId>
-    <artifactId>jero-boot-parent</artifactId>
+    <artifactId>jero-boot</artifactId>
     <version>0.1.0</version>
     <name>jero-boot-parent</name>
     <description>JeroBoot快速开发框架</description>
