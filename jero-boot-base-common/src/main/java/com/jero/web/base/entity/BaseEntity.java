@@ -9,8 +9,6 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
  **/
 public class BaseEntity<T extends BaseEntity<?>> extends Model<BaseEntity<T>> {
 
-    public BaseEntity(){}
-
     @Override
     public String toString(){
         return "BaseEntity()";

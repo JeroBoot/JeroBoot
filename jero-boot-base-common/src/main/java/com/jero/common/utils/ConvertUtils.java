@@ -23,6 +23,11 @@ public class ConvertUtils {
     public static final String DATETIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
     public static final String DATETIME_MS_PATTERN = "yyyy-MM-dd HH:mm:ss.SSS";
 
+    /**
+     * 常量
+     */
+    public static final String DATE_NOT_FIND = "时间参数不存在";
+
     private ConvertUtils() {
         throw new IllegalStateException("ConvertUtils Utility class");
     }
@@ -55,7 +60,7 @@ public class ConvertUtils {
      */
     public static String dateToDateByPattern(Date date, String pattern){
         if (date == null) {
-            throw new DateNullException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
 
         if (pattern == null) {
@@ -82,7 +87,7 @@ public class ConvertUtils {
      */
     public static String localDateToDateByPattern(LocalDate date, String pattern) {
         if (date == null) {
-            throw new DateNullException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
 
         if (pattern == null){
@@ -109,7 +114,7 @@ public class ConvertUtils {
      */
     public static String localDateTimeToDateByPattern(LocalDateTime date, String pattern) {
         if (date == null) {
-            throw new DateNullException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
 
         if (pattern == null){
@@ -152,7 +157,7 @@ public class ConvertUtils {
      * @return 转换后的日期
      * @throws ParseException
      */
-    public static LocalDateTime strToLocalDateTime(String str) throws ParseException{
+    public static LocalDateTime strToLocalDateTime(String str) {
         return strToLocalDateTime(str, null);
     }
 
@@ -177,7 +182,7 @@ public class ConvertUtils {
      * @return 转换后的日期
      * @throws ParseException
      */
-    public static LocalDate strToLocalDate(String str) throws ParseException{
+    public static LocalDate strToLocalDate(String str) {
         return strToLocalDate(str, null);
     }
 
