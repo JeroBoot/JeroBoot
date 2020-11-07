@@ -7,7 +7,7 @@ import java.lang.reflect.Type;
 
 /**
  * @Description Gson工具类
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/3/22
  **/
 public class GsonUtils {

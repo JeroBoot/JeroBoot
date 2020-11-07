@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @Description 分页返回器
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/3/23
  **/
 public class PageInfo<T> {

@@ -6,7 +6,7 @@ import java.util.Random;
 
 /**
  * @Description 随机工具类
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/10/14
  **/
 public class RandomUtils extends RandomUtil {

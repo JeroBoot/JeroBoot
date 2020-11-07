@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 /**
  * 全局日志处理
  *
- * @author lixuetao
+ * @author zero
  * @date 2020-03-25
  */
 @Aspect

@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 /**
  * @Description 添加过期时间的响应头拓展
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/3/24
  **/
 public class ExpiresHeaderResponse extends HttpServletResponseWrapper {

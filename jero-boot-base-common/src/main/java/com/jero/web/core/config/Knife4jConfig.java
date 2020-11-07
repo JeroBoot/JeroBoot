@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @Description swagger增强器knife4j的注解
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/4/23
  **/
 @Configuration

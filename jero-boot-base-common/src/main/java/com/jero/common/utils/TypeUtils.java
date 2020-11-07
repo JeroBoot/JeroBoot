@@ -4,7 +4,7 @@ import cn.hutool.core.util.TypeUtil;
 
 /**
  * @Description 泛型工具类
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/10/14
  **/
 public class TypeUtils extends TypeUtil {

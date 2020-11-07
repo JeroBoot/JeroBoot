@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @Description 过滤器配置器
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/3/24
  **/
 @Configuration

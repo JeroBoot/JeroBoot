@@ -4,7 +4,7 @@ import cn.hutool.core.util.IdcardUtil;
 
 /**
  * @Description 身份证工具类
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/10/14
  **/
 public class IdCardUtils extends IdcardUtil {

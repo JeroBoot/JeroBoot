@@ -4,7 +4,7 @@ import cn.hutool.core.util.NumberUtil;
 
 /**
  * @Description 数字工具类
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/10/14
  **/
 public class NumberUtils extends NumberUtil {

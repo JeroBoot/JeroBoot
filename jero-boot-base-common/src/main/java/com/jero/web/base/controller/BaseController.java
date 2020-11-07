@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * 基础控制器，包含处理分页等方法
  *
- * @author lixuetao
+ * @author zero
  * @date 2020-03-25
  */
 public abstract class BaseController<T extends BaseEntity<?>> {

@@ -4,7 +4,7 @@ import cn.hutool.core.util.EnumUtil;
 
 /**
  * @Description 枚举工具类
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/10/14
  **/
 public class EnumUtils extends EnumUtil {

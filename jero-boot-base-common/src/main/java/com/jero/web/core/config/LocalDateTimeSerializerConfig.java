@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * @Description 本地时间全局转换配置
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/4/20
  **/
 @Configuration

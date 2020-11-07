@@ -11,7 +11,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 /**
  * @Description Jackson全局配置
- * @Author lixuetao
+ * @Author zero
  * @Date 2020/9/4
  **/
 @Configuration
