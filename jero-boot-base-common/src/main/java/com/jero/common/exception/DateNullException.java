@@ -7,7 +7,7 @@ package com.jero.common.exception;
  **/
 public class DateNullException  extends RuntimeException {
 
-    private String error;
+    private final String error;
 
     public DateNullException(String error) {
         this.error = error;
@@ -15,10 +15,6 @@ public class DateNullException  extends RuntimeException {
 
     public String getError() {
         return error;
-    }
-
-    public void setError(String error) {
-        this.error = error;
     }
 
 }

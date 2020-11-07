@@ -14,7 +14,7 @@ public class JeroBizException extends RuntimeException {
     /**
      * 错误编码
      */
-    private int errorCode;
+    private final int errorCode;
 
     public JeroBizException(String message) {
         this(-1, message);
@@ -33,8 +33,5 @@ public class JeroBizException extends RuntimeException {
         return errorCode;
     }
 
-    public void setErrorCode(int errorCode) {
-        this.errorCode = errorCode;
-    }
 
 }
