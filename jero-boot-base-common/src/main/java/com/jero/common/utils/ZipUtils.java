@@ -77,7 +77,7 @@ public class ZipUtils {
         zFile.extractAll(dest);
 
         List<FileHeader> headerList = zFile.getFileHeaders();
-        List<File> extractedFileList = new ArrayList<File>();
+        List<File> extractedFileList = new ArrayList<>();
         for(FileHeader fileHeader : headerList) {
             if (!fileHeader.isDirectory()) {
                 extractedFileList.add(new File(destDir,fileHeader.getFileName()));
@@ -151,7 +151,7 @@ public class ZipUtils {
                 // 如果不创建目录的话,将直接把给定目录下的文件压缩到压缩文件,即没有目录结构
                 if (!isCreateDir) {
                     File [] subFiles = srcFile.listFiles();
-                    ArrayList<File> temp = new ArrayList<File>();
+                    ArrayList<File> temp = new ArrayList<>();
                     Collections.addAll(temp, subFiles);
                     zipFile.addFiles(temp, parameters);
                     return dest;

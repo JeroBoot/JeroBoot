@@ -1,5 +1,6 @@
 package com.jero.common.utils;
 
+import com.jero.common.exception.DateNullException;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.joda.time.PeriodType;
@@ -14,9 +15,14 @@ import java.util.Locale;
  * @author zer0
  * @version 1.0
  */
-public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
+public class DateTimeUtils extends org.apache.commons.lang3.time.DateUtils {
 
-    private DateUtils() {
+    /**
+     * 常量
+     */
+    public static final String DATE_NOT_FIND = "时间参数不存在";
+
+    private DateTimeUtils() {
         throw new IllegalStateException("DateUtils Utility class");
     }
 
@@ -29,7 +35,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffYear(Date date1, Date date2) {
         if (date1 == null || date2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
 
         DateTime dateTime1 = new DateTime(date1);
@@ -47,7 +53,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffYear(Calendar calendar1, Calendar calendar2) {
         if (calendar1 == null || calendar2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
 
         DateTime dateTime1 = new DateTime(calendar1);
@@ -65,7 +71,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffMonth(Date date1, Date date2) {
         if (date1 == null || date2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(date1);
         DateTime dateTime2 = new DateTime(date2);
@@ -82,7 +88,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffMonth(Calendar calendar1, Calendar calendar2) {
         if (calendar1 == null || calendar2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(calendar1);
         DateTime dateTime2 = new DateTime(calendar2);
@@ -99,7 +105,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffDay(Date date1, Date date2) {
         if (date1 == null || date2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(date1);
         DateTime dateTime2 = new DateTime(date2);
@@ -116,7 +122,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffDay(Calendar calendar1, Calendar calendar2) {
         if (calendar1 == null || calendar2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(calendar1);
         DateTime dateTime2 = new DateTime(calendar2);
@@ -133,7 +139,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffHouse(Date date1, Date date2) {
         if (date1 == null || date2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(date1);
         DateTime dateTime2 = new DateTime(date2);
@@ -150,7 +156,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffHouse(Calendar calendar1, Calendar calendar2) {
         if (calendar1 == null || calendar2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(calendar1);
         DateTime dateTime2 = new DateTime(calendar2);
@@ -167,7 +173,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffMinute(Date date1, Date date2) {
         if (date1 == null || date2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(date1);
         DateTime dateTime2 = new DateTime(date2);
@@ -184,7 +190,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffMinute(Calendar calendar1, Calendar calendar2) {
         if (calendar1 == null || calendar2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(calendar1);
         DateTime dateTime2 = new DateTime(calendar2);
@@ -201,7 +207,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffSecond(Date date1, Date date2) {
         if (date1 == null || date2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(date1);
         DateTime dateTime2 = new DateTime(date2);
@@ -218,7 +224,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static int diffSecond(Calendar calendar1, Calendar calendar2) {
         if (calendar1 == null || calendar2 == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         DateTime dateTime1 = new DateTime(calendar1);
         DateTime dateTime2 = new DateTime(calendar2);
@@ -235,7 +241,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static Date getWeekTime(Date date, int weekDay) {
         if (date == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         if (weekDay <= 0 || weekDay > 7) {
             weekDay = 1;
@@ -255,7 +261,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static Calendar getWeekTime(Calendar calendar, int weekDay) {
         if (calendar == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         if (weekDay <= 0 || weekDay > 7) {
             weekDay = 1;
@@ -274,7 +280,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
      */
     public static DateTime resetTimeZero(DateTime dateTime) {
         if (dateTime == null) {
-            throw new IllegalArgumentException("时间参数不存在");
+            throw new DateNullException(DATE_NOT_FIND);
         }
         return dateTime.withHourOfDay(0).withMinuteOfHour(0).withSecondOfMinute(0);
     }
