@@ -9,8 +9,7 @@ public class SnowFlakeGenerator implements IdentifierGenerator {
 
     @Override
     public Number nextId(Object entity) {
-        Long id = DefaultUidGenerator.getUidGenerator().getUID();
-        return id;
+        return DefaultUidGenerator.getUidGenerator().getUID();
     }
 
 }

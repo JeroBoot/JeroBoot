@@ -4,6 +4,10 @@ import com.jero.common.constant.Code;
 
 public class Result {
 
+    private Result() {
+        throw new IllegalStateException("Result Utility class");
+    }
+
     private static final ResponseMessage RESPONSE_MESSAGE_SUCCESS = new ResponseMessage(Code.SUCCESS.getCode(), "", true, null);
 
     public static ResponseMessage success() {

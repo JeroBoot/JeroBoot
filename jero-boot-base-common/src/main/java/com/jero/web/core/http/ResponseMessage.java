@@ -1,16 +1,12 @@
 package com.jero.web.core.http;
 
-import java.io.Serializable;
-
 /**
  * 全局统一响应对象
  *
  * @author zer0
  * @version 1.0
  */
-public class ResponseMessage<T> implements Serializable{
-
-    private static final long serialVersionUID = 2999784516561316773L;
+public class ResponseMessage<T>{
 
     private int code;
     private String message;

@@ -76,7 +76,7 @@ public class ValidExceptionHandler {
     public ResponseMessage<List<String>> handleConstraint(ConstraintViolationException exception) {
         List<String> validErrorList = new ArrayList<>();
         Set<ConstraintViolation<?>> violationSet = exception.getConstraintViolations();
-        for (ConstraintViolation violation : violationSet) {
+        for (ConstraintViolation<?> violation : violationSet) {
             validErrorList.add(violation.getMessage());
             LOGGER.warn("param valid error: obj[{}], filed[{}], message[{}]", violation.getRootBeanClass(),
                     violation.getPropertyPath(), violation.getMessage());
@@ -91,7 +91,7 @@ public class ValidExceptionHandler {
      * @return
      */
     private List<String> adapterValidError(BindingResult result){
-        List<String> validErrorList = new ArrayList<String>();
+        List<String> validErrorList = new ArrayList<>();
         for (FieldError fieldError : result.getFieldErrors()) {
             validErrorList.add(fieldError.getDefaultMessage());
             LOGGER.warn("valid error: obj[{}], filed[{}], message[{}]",

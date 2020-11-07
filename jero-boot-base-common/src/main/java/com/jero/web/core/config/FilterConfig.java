@@ -16,8 +16,8 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
 
     @Bean
-    public FilterRegistrationBean corsFilter(){
-        FilterRegistrationBean registration = new FilterRegistrationBean();
+    public FilterRegistrationBean<CorsFilter> corsFilter(){
+        FilterRegistrationBean<CorsFilter> registration = new FilterRegistrationBean<>();
         registration.setFilter(new CorsFilter());
         registration.addUrlPatterns("/*");
         registration.setName("corsFilter");
@@ -27,8 +27,8 @@ public class FilterConfig {
     }
 
     @Bean
-    public FilterRegistrationBean httpCacheFilter(){
-        FilterRegistrationBean registration = new FilterRegistrationBean();
+    public FilterRegistrationBean<HttpCacheFilter> httpCacheFilter(){
+        FilterRegistrationBean<HttpCacheFilter> registration = new FilterRegistrationBean<>();
         registration.setFilter(new HttpCacheFilter());
         registration.addUrlPatterns("/*");
         registration.setName("httpCacheFilter");
@@ -40,8 +40,8 @@ public class FilterConfig {
 
 
     @Bean
-    public FilterRegistrationBean requestInfoFilter(){
-        FilterRegistrationBean registration = new FilterRegistrationBean();
+    public FilterRegistrationBean<RequestInfoFilter> requestInfoFilter(){
+        FilterRegistrationBean<RequestInfoFilter> registration = new FilterRegistrationBean<>();
         registration.setFilter(new RequestInfoFilter());
         registration.addUrlPatterns("/*");
         registration.setName("requestInfoFilter");

@@ -23,7 +23,7 @@ public class DateTimeUtils extends org.apache.commons.lang3.time.DateUtils {
     public static final String DATE_NOT_FIND = "时间参数不存在";
 
     private DateTimeUtils() {
-        throw new IllegalStateException("DateUtils Utility class");
+        throw new IllegalStateException("DateTimeUtils Utility class");
     }
 
     /**

@@ -2,8 +2,6 @@ package com.jero.web.core.filter;
 
 import com.jero.web.core.filter.wrapper.ExpiresHeaderResponse;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -22,8 +20,6 @@ import java.io.IOException;
  **/
 public class HttpCacheFilter implements Filter {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(HttpCacheFilter.class);
-
     private long maxAge = 60L * 60 * 24; //一天
 
     @Override
@@ -41,8 +37,5 @@ public class HttpCacheFilter implements Filter {
         response.reset();
         filterChain.doFilter(request, new ExpiresHeaderResponse(response, maxAge));
     }
-
-    @Override
-    public void destroy() {}
 
 }
