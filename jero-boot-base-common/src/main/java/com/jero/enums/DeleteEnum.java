@@ -14,6 +14,6 @@ public enum DeleteEnum {
     }
 
     public int getValue(){return value;}
-    public String getＬabel(){return label;}
+    public String getLabel(){return label;}
 
 }
