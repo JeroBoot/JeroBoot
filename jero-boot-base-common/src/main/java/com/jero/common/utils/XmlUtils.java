@@ -1,9 +1,0 @@
-package com.jero.common.utils;
-
-/**
- * @Description Xml工具类，使用Dom4j框架封装
- * @Author zero
- * @Date 2020/10/14
- **/
-public class XmlUtils {
-}
