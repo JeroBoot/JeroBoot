@@ -218,7 +218,7 @@ public class QueryGenerator {
             return null;
         }
 
-        String val = (value+"").toString().trim();
+        String val = String.valueOf(value).trim();
         if (val.contains(COMMA)){
             return QueryCriteriaEnum.IN;
         } else {
@@ -226,6 +226,11 @@ public class QueryGenerator {
         }
     }
 
+    /**
+     * 排序
+     * @param queryWrapper
+     * @param parameterMap
+     */
     private static void doFieldOrder(QueryWrapper<?> queryWrapper, Map<String, String[]> parameterMap){
 
         String orderFiled = null;
