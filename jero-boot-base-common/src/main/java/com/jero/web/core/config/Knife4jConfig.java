@@ -38,7 +38,7 @@ public class Knife4jConfig {
         return new ApiInfoBuilder()
                 .title("Jero Boot RESTful APIs")
                 .description("# Jero Boot RESTful APIs")
-                .termsOfServiceUrl("https://github.com/Jero-framework")
+                .termsOfServiceUrl("https://github.com/JeroBoot")
                 .version("1.0")
                 .build();
     }

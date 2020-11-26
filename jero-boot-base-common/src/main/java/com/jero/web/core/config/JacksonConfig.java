@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 /**
- * @Description Jackson全局配置
+ * @Description Jackson全局配置，将long类型全部转为字符串，
+ * 主要为了处理long类型数据过大，导致前端js精度丢失的问题
  * @Author zero
  * @Date 2020/9/4
  **/
